@@ -5,6 +5,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: 1;
 }
 
 vds-video {
@@ -49,7 +50,6 @@ vds-media:not([paused]) .media-play-icon {
 vds-media {
   display: inline-block;
   width: 100%;
-  z-index: 1;
 }
 
 video {
