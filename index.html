@@ -5,25 +5,40 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/@vidstack/player@1.6.4/cdn/bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@vidstack/player@next/cdn/define/vds-slider-video.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@vidstack/player@next/cdn/define/vds-mute-button.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@vidstack/player@next/cdn/define/vds-play-button.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@vidstack/player@next/cdn/define/vds-aspect-ratio.js"></script>
-  <script
-    type="module"
-    src="https://cdn.jsdelivr.net/npm/@vidstack/player@next/cdn/define/vds-controls.js"
-  ></script>
-  <script
-    type="module"
-    src="https://cdn.jsdelivr.net/npm/@vidstack/player@next/cdn/define/vds-time.js"
-  ></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@vidstack/player@1.6.4/cdn/bundle.min.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@vidstack/player@next/cdn/define/vds-slider-video.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@vidstack/player@next/cdn/define/vds-mute-button.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@vidstack/player@next/cdn/define/vds-play-button.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@vidstack/player@next/cdn/define/vds-aspect-ratio.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@vidstack/player@next/cdn/define/vds-time.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@vidstack/player@next/cdn/define/vds-poster.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@vidstack/player@next/cdn/define/vds-media.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@vidstack/player@next/cdn/define/vds-gesture.js"></script>
   <title>Document</title>
 </head>
 
 <body>
   <div>
     <vds-media>
+      <vds-poster alt="Agent 327 blowing flames with a hair dryer."></vds-poster>
+
+      <div class="big-play-button-container">
+        <vds-play-button class="big-play-button">
+          <svg
+            class="play-icon"
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M19.376 12.416L8.777 19.482A.5.5 0 0 1 8 19.066V4.934a.5.5 0 0 1 .777-.416l10.599 7.066a.5.5 0 0 1 0 .832z"
+            />
+          </svg>
+        </vds-play-button>
+      </div>
+
+      <vds-gesture type="click" repeat="0" action="toggle:paused" priority="1"></vds-gesture>
+
       <div class="media-controls">
         <vds-play-button>
           <svg class="media-play-icon" aria-hidden="true" viewBox="0 0 24 24">
@@ -42,7 +57,7 @@
           </div>
 
           <div class="media-preview-container">
-            <vds-slider-video src="https://47.98.145.29/d/MyOnedrive/Video/电影/Before.Midnight.1080P.x264.mp4"></vds-slider-video>
+            <vds-slider-video src="https://47.98.145.29/d/MyOnedrive/temp/240p.mp4"></vds-slider-video>
             <vds-slider-value-text type="pointer" format="time"></vds-slider-value-text>
           </div>
         </vds-time-slider>
@@ -68,11 +83,11 @@
           </div>
         </vds-volume-slider>
       </div>
-      <!-- <vds-aspect-ratio ratio="16/9"> -->
-      <vds-video poster="https://47.98.145.29/d/MyOnedrive/Video/%E7%94%B5%E5%BD%B1/Before.Midnight.Poster.jpg">
-        <video src="https://media-files.vidstack.io/240p.mp4" preload="none"></video>
-      </vds-video>
-      <!-- </vds-aspect-ratio> -->
+      <vds-aspect-ratio ratio="16/9">
+        <vds-video poster="https://47.98.145.29/d/MyOnedrive/temp/poster.png">
+          <video src="https://47.98.145.29/d/MyOnedrive/temp/240p.mp4" preload="none"></video>
+        </vds-video>
+      </vds-aspect-ratio>
     </vds-media>
   </div>
 </body>
