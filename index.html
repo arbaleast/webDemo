@@ -1,0 +1,80 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@vidstack/player@1.6.4/cdn/bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@vidstack/player@next/cdn/define/vds-slider-video.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@vidstack/player@next/cdn/define/vds-mute-button.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@vidstack/player@next/cdn/define/vds-play-button.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@vidstack/player@next/cdn/define/vds-aspect-ratio.js"></script>
+  <script
+    type="module"
+    src="https://cdn.jsdelivr.net/npm/@vidstack/player@next/cdn/define/vds-controls.js"
+  ></script>
+  <script
+    type="module"
+    src="https://cdn.jsdelivr.net/npm/@vidstack/player@next/cdn/define/vds-time.js"
+  ></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <vds-media>
+      <div class="media-controls">
+        <vds-play-button>
+          <svg class="media-play-icon" aria-hidden="true" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M19.376 12.416L8.777 19.482A.5.5 0 0 1 8 19.066V4.934a.5.5 0 0 1 .777-.416l10.599 7.066a.5.5 0 0 1 0 .832z" />
+          </svg>
+          <svg class="media-pause-icon" aria-hidden="true" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M6 5h2v14H6V5zm10 0h2v14h-2V5z" />
+          </svg>
+        </vds-play-button>
+
+        <vds-time-slider>
+          <div class="slider-track"></div>
+          <div class="slider-track fill"></div>
+          <div class="slider-thumb-container">
+            <div class="slider-thumb"></div>
+          </div>
+
+          <div class="media-preview-container">
+            <vds-slider-video src="https://47.98.145.29/d/MyOnedrive/Video/电影/Before.Midnight.1080P.x264.mp4"></vds-slider-video>
+            <vds-slider-value-text type="pointer" format="time"></vds-slider-value-text>
+          </div>
+        </vds-time-slider>
+
+        <vds-time type="current"></vds-time>
+        <span>/</span>
+        <vds-time type="duration"></vds-time>
+
+        <vds-mute-button>
+          <svg class="media-mute-icon" aria-hidden="true" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M5.889 16H2a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h3.889l5.294-4.332a.5.5 0 0 1 .817.387v15.89a.5.5 0 0 1-.817.387L5.89 16zm14.525-4l3.536 3.536l-1.414 1.414L19 13.414l-3.536 3.536l-1.414-1.414L17.586 12L14.05 8.464l1.414-1.414L19 10.586l3.536-3.536l1.414 1.414L20.414 12z" />
+          </svg>
+          <svg class="media-unmute-icon" aria-hidden="true" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M5.889 16H2a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h3.889l5.294-4.332a.5.5 0 0 1 .817.387v15.89a.5.5 0 0 1-.817.387L5.89 16zm13.517 4.134l-1.416-1.416A8.978 8.978 0 0 0 21 12a8.982 8.982 0 0 0-3.304-6.968l1.42-1.42A10.976 10.976 0 0 1 23 12c0 3.223-1.386 6.122-3.594 8.134zm-3.543-3.543l-1.422-1.422A3.993 3.993 0 0 0 16 12c0-1.43-.75-2.685-1.88-3.392l1.439-1.439A5.991 5.991 0 0 1 18 12c0 1.842-.83 3.49-2.137 4.591z" />
+          </svg>
+        </vds-mute-button>
+
+        <vds-volume-slider>
+          <div class="slider-track"></div>
+          <div class="slider-track fill"></div>
+          <div class="slider-thumb-container">
+            <div class="slider-thumb"></div>
+          </div>
+        </vds-volume-slider>
+      </div>
+      <!-- <vds-aspect-ratio ratio="16/9"> -->
+      <vds-video poster="https://47.98.145.29/d/MyOnedrive/Video/%E7%94%B5%E5%BD%B1/Before.Midnight.Poster.jpg">
+        <video src="https://media-files.vidstack.io/240p.mp4" preload="none"></video>
+      </vds-video>
+      <!-- </vds-aspect-ratio> -->
+    </vds-media>
+  </div>
+</body>
+
+</html>
